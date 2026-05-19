@@ -1,4 +1,4 @@
-function rose_box(varargin)
+function roseBox(varargin)
 % Zhaoxu Liu / slandarer (2026). rose box 
 % (https://github.com/slandarer/MATLAB-rose-box), GitHub. Retrieved May 19, 2026.
 % 
