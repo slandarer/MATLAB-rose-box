@@ -1,4 +1,10 @@
 function rose_box(varargin)
+% Zhaoxu Liu / slandarer (2026). rose box 
+% (https://github.com/slandarer/MATLAB-rose-box), GitHub. Retrieved May 19, 2026.
+% 
+% Zhaoxu Liu / slandarer (2026). rose box 
+% (https://www.mathworks.com/matlabcentral/fileexchange/183906-rose-box), 
+% MATLAB Central File Exchange. Retrieved May 19, 2026.
 ax = gca; CList = {};
 CList{1} = [.13 .10 .16; .20 .09 .20; .28 .08 .23; .42 .08 .30;
     .51 .07 .34; .66 .12 .35; .79 .22 .40; .88 .35 .47;
