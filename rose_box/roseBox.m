@@ -41,17 +41,20 @@ Y = [sin(tr) + 1, sin(tl) + 1, linspace(1 - sqrt(2)/2, -sqrt(2), 50), linspace(-
 X = X.*1.15; Y = (Y - .764).*1.15 + .764;
 
 
-hold(ax, 'on'); axis tight equal off
+hold(ax, 'on'); 
+axis(ax, 'tight')
+axis(ax, 'equal') 
+axis(ax, 'off')
 ax.Projection = 'perspective';
 ax.Position = [- 1/9 + 1/18, -1/9, 11/9, 11/9];
 ax.View = [-14.67, 47.27];
 
 % Bottom face of the box
-fill3(X, Y, X.*0 + .3, [0, 0, 0])
+fill3(ax, X, Y, X.*0 + .3, [0, 0, 0])
 % Create box wall surface with gradient color
 X = repmat(X, [10, 1]); Y = repmat(Y, [10, 1]);
 H = repmat(linspace(.3, 1.2, 10).', [1, 300]);
-surf(X, Y, H, 'FaceColor','interp', 'CData', H2C(H, [9,11,12; [59,36,62]./2]./255), ...
+surf(ax, X, Y, H, 'FaceColor','interp', 'CData', H2C(H, [9,11,12; [59,36,62]./2]./255), ...
     'EdgeColor',[59,36,62]./2./255, 'EdgeAlpha',.5)
 
 % Rose positions within the box
@@ -77,7 +80,7 @@ x = r.*cos(t); y = r.*sin(t);
 Rz = @(yz) [cos(yz), - sin(yz), 0; sin(yz), cos(yz), 0; 0, 0, 1];
 for k = 1:size(V, 1)
     [u, v, w] = matRotate(x.*.5, y.*.5, h - .05 + rand(1).*.05, Rz(rand(1)));
-    surf(u + V(k, 1), v + V(k, 2), w, 'EdgeAlpha',.05, 'EdgeColor','none', ...
+    surf(ax, u + V(k, 1), v + V(k, 2), w, 'EdgeAlpha',.05, 'EdgeColor','none', ...
         'FaceColor','interp', 'CData',H2C(h, CList{C(k)}));
 end
 
