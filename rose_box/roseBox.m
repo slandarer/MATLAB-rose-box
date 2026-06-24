@@ -1,4 +1,30 @@
 function roseBox(varargin)
+% roseBox - Create a 3D heart-shaped rose gift box (创建 3D 心形玫瑰礼盒)
+%   roseBox() creates a rose gift box with three default colormaps in the
+%   current axes. The box contains roses arranged in a heart shape.
+%   在当前坐标区使用三种默认配色创建心形玫瑰礼盒。
+%
+%   roseBox(CList) creates a rose gift box in the current axes using the
+%   specified colormap cell array CList (length 3) for different rose positions.
+%   在当前坐标区使用指定的配色元胞数组 CList (长度为3) 为不同位置的玫瑰花上色。
+%
+%   roseBox(ax) creates a rose gift box in the specified axes with default colormaps.
+%   在指定坐标区使用默认配色创建心形玫瑰礼盒。
+%
+%   roseBox(ax, CList) creates a rose gift box in the specified axes using
+%   the given colormap cell array.
+%   在指定坐标区使用给定的配色元胞数组创建心形玫瑰礼盒。
+%
+% Input:
+%   ax    - axes handle (optional) (坐标轴句柄，可选)
+%   CList - 1×3 cell array, where each cell contains an N×3 RGB matrix with
+%           values in [0, 1]. The three colormaps correspond to different
+%           rose positions within the heart-shaped box. If not provided,
+%           three default colormaps are used.
+%           (1×3 元胞数组，每个元胞包含一个 N×3 RGB 矩阵，数值在 [0,1] 之间。
+%            三种配色分别对应心形礼盒内不同位置的玫瑰花。若未提供，则使用三种默认配色。)
+
+
 % Zhaoxu Liu / slandarer (2026). rose box 
 % (https://github.com/slandarer/MATLAB-rose-box), GitHub. Retrieved May 19, 2026.
 % 
